@@ -9,7 +9,7 @@ st.markdown("Dashboard ini menampilkan analisis revenue dan distribusi pelanggan
 
 @st.cache_data
 def load_data():
-    data = pd.read_csv("dashboard/dashboard_data.csv")
+    data = pd.read_csv("dashboard_data.csv")
     data['order_purchase_timestamp'] = pd.to_datetime(data['order_purchase_timestamp'])
     return data
 
