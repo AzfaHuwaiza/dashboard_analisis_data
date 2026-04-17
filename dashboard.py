@@ -6,7 +6,7 @@ import streamlit as st
 st.set_page_config(page_title="E-Commerce Dashboard", layout="wide")
 
 def load_data():
-    df = pd.read_csv("dashboard/main_data.csv")
+    df = pd.read_csv("main_data.csv")
     df['order_purchase_timestamp'] = pd.to_datetime(df['order_purchase_timestamp'])
     df['year'] = df['order_purchase_timestamp'].dt.year
     return df
